@@ -1,0 +1,5 @@
+---
+  - name: "Play2: Record Keys in Known Hosts file"
+    hosts: all
+    vars:
+    - host_file: "~/.SSH/known_hosts"
