@@ -3,3 +3,9 @@
     hosts: all
     vars:
     - host_file: "~/.SSH/known_hosts"
+    tasks:
+      - name: Create known hosts file"
+        file:
+        path: "{{ hosts_file }}"
+        stage: file
+        changed_when: false
