@@ -3,5 +3,14 @@
 interfaces:
   ISP1:
     - name: GigabitEthernet0/0
-      description: Interface to ISP2 
-      
+      description: Interface to ISP2
+    - name: GigabitEthernet0/2
+      description: Management
+
+  ISP2:
+    - name: GigabitEthernet0/2
+      description: Management
+
+  ISP3: 
+    - name: GigabitEthernet0/2
+      description: Management 
