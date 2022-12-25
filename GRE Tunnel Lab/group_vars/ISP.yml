@@ -1,0 +1,7 @@
+---
+
+interfaces:
+  ISP1:
+    - name: GigabitEthernet0/0
+      description: Interface to ISP2 
+      
