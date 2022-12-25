@@ -6,7 +6,6 @@ interfaces:
       description: Management
     - name: Tunnel 220
       description: Customer Site 1 Dynamic Tunnel
-
   Customer2:
     - name: GigabitEthernet0/2
       description: Management
