@@ -1,0 +1,10 @@
+---
+
+interfaces:
+  Customer1:
+    - name: GigabitEthernet0/2
+      description: Management
+
+  Customer2:
+    - name: GigabitEthernet0/2
+      description: Management
