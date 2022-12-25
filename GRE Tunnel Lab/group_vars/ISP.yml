@@ -8,12 +8,10 @@ interfaces:
     - name: GigabitEthernet0/2
       description: Management
       ipv4:
-
   ISP2:
     - name: GigabitEthernet0/2
       description: Management
       ipv4:
-
   ISP3: 
     - name: GigabitEthernet0/2
       description: Management 
