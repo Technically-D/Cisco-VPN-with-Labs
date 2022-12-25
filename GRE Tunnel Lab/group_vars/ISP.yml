@@ -4,13 +4,17 @@ interfaces:
   ISP1:
     - name: GigabitEthernet0/0
       description: Interface to ISP2
+      ipv4:
     - name: GigabitEthernet0/2
       description: Management
+      ipv4:
 
   ISP2:
     - name: GigabitEthernet0/2
       description: Management
+      ipv4:
 
   ISP3: 
     - name: GigabitEthernet0/2
       description: Management 
+      ipv4:
