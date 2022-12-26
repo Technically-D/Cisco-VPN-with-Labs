@@ -9,7 +9,7 @@
             - name: "{{ item.name }}"
               description: "{{ item.description }}"
 
-      - name: Configure Interface for network 
+      - name: Configure IP address for network routers
         cisco.ios.ios_l3_interfaces:
           config:
             name: "{{ item.name }}"
