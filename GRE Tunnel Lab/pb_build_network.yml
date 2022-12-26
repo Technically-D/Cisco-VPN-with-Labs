@@ -1,0 +1,17 @@
+---
+  - name: This playbook configures Interfaces for network
+    hosts: all
+    gather_facts: false
+    tasks:
+      - name: Configure interfaces on network routers
+        ios_interfaces:
+          config:
+            - name: "{{ item.name }}"
+              description: "{{ item.description }}"
+
+      - name: Configure Interface for network 
+        cisco.ios.ios_l3_interfaces:
+          config:
+            name: "{{ item.name }}"
+            ipv4: 
+              address: "{{ item.ipv4 }}"
