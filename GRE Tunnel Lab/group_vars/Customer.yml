@@ -6,8 +6,12 @@ interfaces:
       description: Management
     - name: Tunnel 220
       description: Customer Site 1 Dynamic Tunnel
+    - name: GigabitEthernet0/0
+      description: Interface to Lan
   Customer2:
     - name: GigabitEthernet0/2
       description: Management
     - name: Tunnel 220
       description: Customer Site 2 Dynamic Tunnel
+    - name: GigabitEthernet0/1
+      description: Interface to Lan
