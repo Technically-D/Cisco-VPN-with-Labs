@@ -8,6 +8,7 @@
           config:
             - name: "{{ item.name }}"
               description: "{{ item.description }}"
+        with_items: " {{ interfaces[inventory_hostname] }}"
 
       - name: Configure IP address for network routers
         cisco.ios.ios_l3_interfaces:
@@ -15,3 +16,4 @@
             - name: "{{ item.name }}"
               ipv4:
                 address: "{{ item.ipv4 }}"
+        with_items: " {{ interfaces[inventory_hostname] }}"
