@@ -6,6 +6,6 @@
     tasks:
       - name: Create known hosts file"
         file:
-        path: "{{ hosts_file }}"
+        path: "{{ host_file }}"
         stage: file
         changed_when: false
