@@ -1,0 +1,17 @@
+---
+  - name: Test playbook for running show commands
+    hosts: network
+    gather_facts: false
+    tasks: 
+
+      - name: Run various show commands 
+        cisco.ios.ios_command:
+          commands:
+            - show version
+
+        register: output
+
+      - name: Debug the output
+        ansible.builtin.debug:
+          var: output.stdout
+            
