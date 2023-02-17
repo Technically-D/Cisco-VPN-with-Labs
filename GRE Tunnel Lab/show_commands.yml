@@ -7,7 +7,7 @@
       - name: Run various show commands 
         cisco.ios.ios_command:
           commands:
-            - show version
+            - wr mem
 
         register: output
 
