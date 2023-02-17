@@ -7,3 +7,79 @@ name_servers:
 ntp_server: 172.20.1.17
 intf_duplex: full
 intf_mtu: 1500
+
+---
+
+interfaces:
+  Customer1:
+    - name: GigabitEthernet0/2
+      description: Management
+      ipv4: dhcp
+      duplex: auto
+    - name: Tunnel 220
+      description: Customer Site 1 Dynamic Tunnel
+      ipv4: 10.1.3.1/24
+      duplex: auto
+    - name: GigabitEthernet0/0
+      description: Interface to Lan
+      ipv4: 10.1.1.1/24
+      duplex: auto
+    - name: GigabitEthernet0/1
+      description: Interface to ISP2
+      ipv4: dhcp
+      duplex: auto
+  Customer2:
+    - name: GigabitEthernet0/2
+      description: Management
+      duplex: auto
+      ipv4: dhcp
+    - name: Tunnel 220
+      description: Customer Site 2 Dynamic Tunnel
+      ipv4: 10.1.3.2/24
+      duplex: auto
+    - name: GigabitEthernet0/1
+      description: Interface to Lan
+      ipv4: 10.1.2.1/24
+      duplex: auto
+    - name: GigabitEthernet0/0
+      description: Interface to ISP3
+      ipv4: dhcp
+      duplex: auto
+  ISP1:
+    - name: GigabitEthernet0/0
+      description: Interface to ISP2
+      ipv4: 8.8.8.1/24
+      duplex: auto
+    - name: GigabitEthernet0/2
+      description: Management
+      ipv4: dhcp
+      duplex: auto
+    - name: GigabitEthernet0/1
+      description: Interface to ISP3
+      ipv4: 8.8.9.1/24
+  ISP2:
+    - name: GigabitEthernet0/2
+      description: Management
+      ipv4: dhcp
+      duplex: auto
+    - name: GigabitEthernet0/0
+      description: Interface to Customer1
+      ipv4: 8.8.10.1/24
+      duplex: auto
+    - name: GigabitEthernet0/1
+      description: Interface to ISP1
+      ipv4: 8.8.8.2/24
+      duplex: auto
+  ISP3: 
+    - name: GigabitEthernet0/2
+      description: Management 
+      ipv4: dhcp
+      duplex: auto
+    - name: GigabitEthernet0/0
+      description: Interface to ISP1
+      ipv4: 8.8.9.2/24
+      duplex: auto
+    - name: GigabitEthernet0/1
+      description: Interface to Customer2
+      ipv4: 8.8.11.1/24
+      duplex: auto
