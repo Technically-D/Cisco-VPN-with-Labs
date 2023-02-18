@@ -13,7 +13,8 @@
       - name: Configure IP address for network routers
         cisco.ios.ios_l3_interfaces:
           config:
-            - name: "{{ item.name }}"
-              ipv4:
-              - address: "{{ item.address }}"
+          - name: "{{ item.name }}"
+            ipv4:
+            - address: "{{ item.address }}"
+          state: merged
         with_items: "{{interfaces[inventory_hostname]}}"
