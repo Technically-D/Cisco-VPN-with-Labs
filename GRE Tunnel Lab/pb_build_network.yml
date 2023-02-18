@@ -15,5 +15,5 @@
           config:
             - name: "{{ item.name }}"
               ipv4:
-                address: "{{ item.ipv4 }}"
+              - address: "{{ item.address }}"
         with_items: "{{interfaces[inventory_hostname]}}"
