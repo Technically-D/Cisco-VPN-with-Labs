@@ -16,5 +16,6 @@
           - name: "{{ item.name }}"
             ipv4:
             - address: "{{ item.ipv4 }} {{ item.mask }}"
+        ignore_errors: true
         with_items: "{{interfaces[inventory_hostname]}}"
         tags: ip
