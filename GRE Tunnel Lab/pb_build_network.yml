@@ -12,8 +12,7 @@
 
       - name: Configure IP address for network routers
         ios_l3_interface:
-          - name: "{{ item.name }}"
-            ipv4: "{{ item.address }}"
-          state: merged
+          name: "{{ item.name }}"
+          ipv4: "{{ item.ipv4 }}"
         with_items: "{{interfaces[inventory_hostname]}}"
         tags: ip
