@@ -12,7 +12,6 @@
 
       - name: Configure IP address for network routers
         ios_l3_interface:
-          config:
           - name: "{{ item.name }}"
             ipv4:
             - address: "{{ item.address }}"
