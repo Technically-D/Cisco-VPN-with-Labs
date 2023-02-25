@@ -11,7 +11,7 @@
         with_items: "{{interfaces[inventory_hostname]}}"
 
       - name: Configure IP address for network routers
-        cisco.ios.ios_l3_interfaces:
+        ios_l3_interface:
           config:
           - name: "{{ item.name }}"
             ipv4:
