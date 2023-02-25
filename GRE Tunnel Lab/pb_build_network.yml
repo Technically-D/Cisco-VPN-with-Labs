@@ -9,6 +9,7 @@
             - name: "{{ item.name }}"
               description: "{{ item.description }}"
         with_items: "{{interfaces[inventory_hostname]}}"
+        tags: interfaces
 
       - name: Configure IP address for network routers
         ios_l3_interfaces:
