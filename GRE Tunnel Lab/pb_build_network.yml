@@ -22,3 +22,10 @@
         tags: ip
 
       - name: Configure OSPF on interfaces
+        cisco.ios.ios_ospfv2:
+          config:
+            processes: 1
+              network:
+                address:
+                area:
+                wildcard_bits:
