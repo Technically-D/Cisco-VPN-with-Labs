@@ -29,4 +29,6 @@
       - name: Configure OSPF On Interfaces
         ios_config:
           parents: interface {{ item.name }}
+          lines: 
+            - ip ospf {{ ospf_process  }} area {{ ospf_area }}
         
