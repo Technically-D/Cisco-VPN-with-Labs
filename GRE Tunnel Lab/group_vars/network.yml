@@ -55,6 +55,7 @@ interfaces:
       description: Interface to ISP2
       ipv4: 8.8.8.1
       mask: 255.255.255.0
+      ospf: yes
       duplex: auto
     - name: GigabitEthernet0/2
       description: Management
