@@ -24,6 +24,7 @@
   - name: Configure OSPF on Routers
     hosts: all
     tags: ospf
+    gather_facts: false
     tasks: 
 
       - name: Configure OSPF On Interfaces
