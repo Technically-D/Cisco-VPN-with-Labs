@@ -47,6 +47,7 @@ interfaces:
       duplex: auto
     - name: GigabitEthernet0/0
       description: Interface to ISP3
+      ospf: yes
       ipv4: dhcp
       duplex: auto
   ISP1:
