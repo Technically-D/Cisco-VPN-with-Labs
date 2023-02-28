@@ -24,7 +24,7 @@
       - name: Configure OSPF on interfaces
         cisco.ios.ios_ospfv2:
           config:
-            processes: 1
+            processes: 
               network:
                 address:
                 area:
