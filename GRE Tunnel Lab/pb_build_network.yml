@@ -28,9 +28,13 @@
     tasks: 
 
       - name: Configure OSPF On Interfaces
-        ios_config:
-          parents: interface {{ item.name }}
-          lines: 
-            - ip ospf {{ ospf_process  }} area {{ ospf_area }}
-        with_items: "{{interfaces[inventory_hostname] | selectattr ('ospf') | list }}"
-        
+        cisco.ios.ios_ospfv2:
+          config:
+            processes:
+            - log_adjacency_changes:
+                set: true
+              network:
+              - address 0.0.0.0
+                area: '0'
+
+          
