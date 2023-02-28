@@ -32,5 +32,5 @@
           parents: interface {{ item.name }}
           lines: 
             - ip ospf {{ ospf_process  }} area {{ ospf_area }}
-        with_items: "{{interfaces[inventory_hostname] | selectattr('ospf') | list }}"
+        with_items: "{{interfaces[inventory_hostname] | selectattr ('ospf') | list }}"
         
