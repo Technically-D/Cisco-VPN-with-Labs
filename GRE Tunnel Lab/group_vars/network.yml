@@ -93,8 +93,10 @@ interfaces:
       ipv4: 8.8.9.2
       mask: 255.255.255.0
       duplex: auto
+      ospf: yes
     - name: GigabitEthernet0/1
       description: Interface to Customer2
       ipv4: 8.8.11.1
       mask: 255.255.255.0
       duplex: auto
+      ospf: yes
