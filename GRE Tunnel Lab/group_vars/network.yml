@@ -21,13 +21,14 @@ interfaces:
       mask: 255.255.255.0
       duplex: auto
     - name: GigabitEthernet0/0
+      description: Interface to ISP2
+      ipv4: dhcp
+      ospf: yes
+      duplex: auto
+    - name: GigabitEthernet0/1
       description: Interface to Lan
       ipv4: 10.1.1.1
       mask: 255.255.255.0
-      duplex: auto
-    - name: GigabitEthernet0/1
-      description: Interface to ISP2
-      ipv4: dhcp
       duplex: auto
   Customer2:
     - name: GigabitEthernet0/2
