@@ -22,7 +22,7 @@
         tags: ip
 
   - name: Configure OSPF on Routers
-    hosts: all
+    hosts: ISP1
     tags: ospf
     gather_facts: false
     tasks: 
@@ -34,7 +34,7 @@
             - log_adjacency_changes:
                 set: true
               network:
-              - address 0.0.0.0
+              - address: 0.0.0.0
                 area: '0'
                 wildcard_bits: 255.255.255.255
               process_id: 100
