@@ -1,12 +1,6 @@
 ---
 
-name_servers:
-- 172.20.1.250
-- 172.20.1.251
 
-ntp_server: 172.20.1.17
-intf_duplex: auto
-intf_mtu: 1500
 
 
 interfaces:
